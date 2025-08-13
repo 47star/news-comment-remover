@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "인터넷 뉴스 댓글 제거",
+  "version": "1.0.1",
+  "description": "인터넷 뉴스 댓글 제거",
+  "permissions": [],
+  "host_permissions": [
+    "https://*.news.naver.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.news.naver.com/*"],
+      "js": ["newsCommentRemover.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{f80c0ba4-643a-4c94-a92e-83b6e948e2e9}"
+    }
+  }
+}
